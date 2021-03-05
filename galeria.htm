@@ -1,0 +1,57 @@
+
+<STYLE TYPE="text/css">
+BODY
+{
+  background-color: #000000;
+}
+
+BODY
+{
+  background-color: #000000;
+}
+</STYLE>
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Galeria</TITLE>
+</HTML>
+<center>
+<img src="Obrazki/kompas.jpg" name="photoslider" alt=" ">
+<form method="POST" name="rotater">
+<script language="JavaScript1.1">
+var photos=new Array()
+var which=0
+
+/*Change the below variables to reference your own images. You may have as many images in the slider as you wish*/
+photos[1]="Obrazki/haki.jpg"
+photos[2]="Obrazki/ippon-sugi.jpg"
+photos[3]="Obrazki/haki2.jpg"
+photos[4]="Obrazki/kamayari.jpg"
+photos[5]="Obrazki/kamayari2.jpg"
+photos[6]="Obrazki/bisento.jpg"
+photos[7]="Obrazki/wojownik.jpg"
+photos[8]="Obrazki/fukiya.jpg"
+
+
+function backward(){
+if (which>0){
+window.status=''
+which--
+document.images.photoslider.src=photos[which]
+}
+}
+
+function forward(){
+if (which<photos.length-1){
+which++
+document.images.photoslider.src=photos[which]
+}
+else window.status='Koniec obrazków... '
+}
+</script>
+<input type="button" value="&#9668;" name="B2"
+onClick="backward()"> <input type="button" value="&#9658;" name="B1"
+onClick="forward()"><br>
+</form>
+</center>
+
